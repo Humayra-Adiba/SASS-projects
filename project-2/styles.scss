@@ -1,0 +1,66 @@
+$width:300px;
+$height:300px;
+$boxes:10;
+$animation_duration:15s;
+$animation_container:true;
+$animation_box:true;
+
+body{
+    position: relative;
+    height: 100vh;
+    background-color: #8acbe4;
+}
+
+.container{
+    position: absolute;
+    height: $height;
+    width: $width;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+
+    @if $animation_container == true{
+        animation: $animation_duration rotate-container ease-in-out infinite alternate;
+    }
+}
+
+.box{
+    position: absolute;
+    border: 3px dotted #0309a9f1;
+    width: $width;
+    height: $height;
+    will-change: transform;
+
+    @if $animation_box == true{
+        animation: $animation_duration rotate-square ease-in infinite alternate;
+    }
+
+    @for $i from 1 through $boxes{
+        &:nth-child(#{$i}){
+            $current: $i * (90 / $boxes) *1deg;
+            --current : #{$current};
+            transform: rotate(var(--current));
+
+            @keyframes rotate-square {
+                0%{
+                    transform: none;
+                }
+                20%{
+                    transform: none;
+                }
+                70%{
+                    text-replace: rotate(var(--current));
+                }
+            }
+        }
+    } 
+}
+
+@keyframes rotate-container {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(720deg);
+    }
+}
