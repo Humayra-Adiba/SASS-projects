@@ -1,0 +1,118 @@
+@keyframes spin-pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    background: #f6e60a;
+    box-shadow: 0 0 30px #f6e60a;
+  }
+  25% {
+    transform: scale(1.2) rotate(90deg);
+    background: #2db1ea;
+    box-shadow: 0 0 50px #2db1ea;
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    background: #16e308;
+    box-shadow: 0 0 60px #16e308;
+  }
+  75% {
+    transform: scale(1.2) rotate(270deg);
+    background: #2db1ea;
+    box-shadow: 0 0 30px #2db1ea;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    background: #f6e60a;
+    box-shadow: 0 0 20px #f6e60a;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.container .star {
+  width: 125px;
+  height: 125px;
+  background: #f6e60a;
+  position: relative;
+  margin-bottom: 250px;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: spin-pulse 4s infinite;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.container1 .star {
+  width: 100px;
+  height: 100px;
+  background: #f6e60a;
+  position: relative;
+  margin-top: 250px;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: spin-pulse 4s infinite;
+}
+
+.mylove {
+  display: flex;
+  gap: 40px;
+}
+
+.myhun {
+  display: flex;
+  gap: 35px;
+}
+
+.mystar {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, #a407cc, #ec4cc2);
+}
+
+.adi {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: antiquewhite;
+}
+
+@keyframes box-animation {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    background-color: rgb(241, 139, 38);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+    background-color: bisque;
+  }
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background: inherit;
+}
+.container2 .box {
+  width: 200px;
+  height: 150px;
+  color: #000;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: box-animation 3s infinite;
+}
+.container2 .box span {
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
